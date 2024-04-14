@@ -2,7 +2,11 @@ import { rqx } from "@src/api";
 import { LINK_ACTIONS } from "./enum";
 import { isValidString } from "./string";
 
-export function htmlParser(html = "", isLoggedIn = false) {
+export const isNotNull = (value) => {
+  return value != null;
+};
+
+export const htmlParser = (html = "", isLoggedIn = false) => {
   if (!isValidString(html)) {
     return "";
   }
@@ -18,7 +22,7 @@ export function htmlParser(html = "", isLoggedIn = false) {
   );
 
   return html;
-}
+};
 
 export const redirect = (action, slug) => {
   const { SAME_TAB, NEW_TAB, POPUP } = LINK_ACTIONS;

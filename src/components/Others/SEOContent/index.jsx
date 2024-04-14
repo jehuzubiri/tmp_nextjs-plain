@@ -1,10 +1,8 @@
 import React from "react";
-import { MaxWidthControl } from "@src/components/GeneralCustom";
+import { MaxWidthControl } from "@src/components/Others";
 import { Typography } from "@src/components/DataDisplay";
 
-const SEOContent = ({
-  paragraph = "",
-}) => {
+const SEOContent = ({ paragraph = "" }) => {
   return (
     <MaxWidthControl withParent>
       <Typography text={paragraph} isHeader tagType="textParagraph" />

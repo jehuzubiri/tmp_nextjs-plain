@@ -2,8 +2,9 @@ import mediaQuery from "@src/constants/MediaQuery";
 import { FLEXBOX } from "@src/constants/Snippet";
 import { useTheme } from "@mui/material";
 
-const sxErrorPage = () => {
+const useErrorPageStyle = () => {
   const { isLapS, isMobM } = mediaQuery("down");
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const theme = useTheme();
 
   return {
@@ -49,4 +50,4 @@ const sxErrorPage = () => {
     },
   };
 };
-export default sxErrorPage;
+export default useErrorPageStyle;

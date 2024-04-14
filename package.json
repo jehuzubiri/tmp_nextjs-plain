@@ -9,9 +9,9 @@
 		"lint": "next lint",
 		"build-and-serve": "npm run build; npm run start",
 		"generate:icons": "./.scripts/generate-icons.sh",
-		"development": "ENV=local env-cmd -f .env.development next",
-		"staging": "ENV=local env-cmd -f .env.staging next",
-		"production": "ENV=local env-cmd -f .env.production next"
+		"development": "ENV=local env-cmd -f .docs/env/.env.development next",
+		"staging": "ENV=local env-cmd -f .docs/env/.env.staging next",
+		"production": "ENV=local env-cmd -f .docs/env/.env.production next"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.11.3",

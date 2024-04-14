@@ -14,17 +14,42 @@ class GeneralServices {
   async getMainHandler(path, params, type = "get") {
     let resFinal = {
       data: {},
-      message: "success"
+      ok: false
     };
 
     try {
       const res = await rqx[type](path, params);
       resFinal.data = res?.data
+      resFinal.ok = true;
     } catch (err) {
       console.error({ 'main_api_handler:': err });
-      resFinal.message = "error";
       resFinal.data = err?.data?.error || err;
     }
+    return resFinal;
+  }
+
+  async getMiddlewareHandler(path, params, type = "get") {
+    let resFinal = {
+      data: {},
+      ok: false,
+    };
+
+    try {
+      const middlewareRes = await fetch("/api/general", {
+        method: "POST",
+        body: JSON.stringify({
+          path,
+          params,
+          type,
+        }),
+      });
+      const res = await middlewareRes.json();
+      resFinal.data = res?.axiosRes;
+      resFinal.ok = res?.ok;
+    } catch (error) {
+      resFinal.data = error?.data?.error || error;
+    }
+
     return resFinal;
   }
 

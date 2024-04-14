@@ -1,4 +1,4 @@
-import { MaxWidthControl } from "@src/components/GeneralCustom";
+import { MaxWidthControl } from "@src/components/Others";
 import useFooterStyle from "./useFooterStyle";
 
 const Footer = () => {

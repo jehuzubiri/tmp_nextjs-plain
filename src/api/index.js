@@ -3,7 +3,7 @@ import { COOKIES } from "@src/utils/enum";
 import axios from "axios";
 
 // Set withCredentials & withXSRFToken to true if using a cookie sesion
-axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = false;
 axios.defaults.withXSRFToken = true;
 
 export default class API {
@@ -27,7 +27,7 @@ export default class API {
         const locale = cookie.get(COOKIES.LOCALE);
 
         // CONFIGURE HEADER
-        if (webtoken) config.headers.Authorization = `Bearer ${token}`;
+        if (webtoken) config.headers.Authorization = `Bearer ${webtoken}`;
         if (locale) {
           config.headers["Accept-Language"] = locale;
           config.headers["x-locale"] = locale;

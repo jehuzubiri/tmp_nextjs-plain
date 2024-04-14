@@ -11,7 +11,7 @@ const processAction = async (dispatch, opt) => {
     if (Boolean(opt.failed)) dispatch({ type: opt.failed, payload: result });
   } else {
     if (Boolean(opt.success))
-      dispatch({ type: opt.success, payload: result?.data?.data });
+      dispatch({ type: opt.success, payload: result?.data });
   }
 
   return result;

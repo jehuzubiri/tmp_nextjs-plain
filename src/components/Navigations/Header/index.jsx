@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { AppBar } from "@mui/material";
 import { useRouter } from "next/router";
-import { MaxWidthControl } from "@src/components/GeneralCustom";
+import { MaxWidthControl } from "@src/components/Others";
 import useHeaderStyle from "./useHeaderStyle";
 
 const Header = () => {

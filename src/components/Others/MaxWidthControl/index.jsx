@@ -3,14 +3,7 @@ import { Box, useTheme } from "@mui/material";
 import { FLEXBOX } from "@src/constants/Snippet";
 import mediaQuery from "@src/constants/MediaQuery";
 
-const MaxWidthControl = ({
-  children,
-  withParent = false,
-  sx,
-  parentSx,
-  parentID,
-  component = "div"
-}) => {
+const MaxWidthControl = ({ children, withParent = false, sx, parentSx, parentID, component = "div" }) => {
   const theme = useTheme();
   const { isLapM, isMobM } = mediaQuery("down");
 
@@ -26,7 +19,7 @@ const MaxWidthControl = ({
         },
         [isMobM]: {
           padding: "0 1.25rem !important",
-        }
+        },
       }}
     >
       {children}
@@ -48,7 +41,9 @@ const MaxWidthControl = ({
         >
           {mainMaxWidthElement()}
         </Box>
-      ) : mainMaxWidthElement()}
+      ) : (
+        mainMaxWidthElement()
+      )}
     </>
   );
 };

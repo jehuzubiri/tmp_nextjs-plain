@@ -1,6 +1,6 @@
 import React from 'react';
 import { Pagination as PaginationMui } from '@mui/material';
-import { MaxWidthControl } from '@src/components/GeneralCustom';
+import { MaxWidthControl } from '@src/components/Others';
 import usePaginationStyle from './usePaginationStyle';
 
 const Pagination = (props) => {
