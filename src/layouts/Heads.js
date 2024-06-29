@@ -3,7 +3,7 @@ import Head from 'next/head';
 const Heads = () => {
   return (
     <Head>
-      <title>Template Title</title>
+      <title>Nextjs Template</title>
       <meta name='viewport' content='width=device-width, initial-scale=1' />
     </Head>
   );
