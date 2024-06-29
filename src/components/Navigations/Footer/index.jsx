@@ -1,13 +1,13 @@
-import { MaxWidthControl } from "@src/components/Others";
+import { MaxWidth } from "@src/components/CustomComponents";
 import useFooterStyle from "./useFooterStyle";
 
 const Footer = () => {
   const style = useFooterStyle();
 
   return (
-    <MaxWidthControl withParent parentSx={style?.mainContainer} sx={{}} component="footer">
+    <MaxWidth withParent parentSx={style?.root} sx={{}} component="footer">
       Footer Content Here
-    </MaxWidthControl>
+    </MaxWidth>
   );
 };
 

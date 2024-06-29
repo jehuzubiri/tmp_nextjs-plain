@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
-import { AppBar } from "@mui/material";
-import { useRouter } from "next/router";
-import { MaxWidthControl } from "@src/components/Others";
-import useHeaderStyle from "./useHeaderStyle";
+import { useState, useEffect } from 'react';
+import { AppBar } from '@mui/material';
+import { useRouter } from 'next/router';
+import { MaxWidth } from '@src/components/CustomComponents';
+import useHeaderStyle from './useHeaderStyle';
 
 const Header = () => {
   const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
-  const style = useHeaderStyle(scrolled);
+  const style = useHeaderStyle({ scrolled });
 
   useEffect(() => {
     window.onscroll = function () {
@@ -20,10 +20,8 @@ const Header = () => {
   }, []);
 
   return (
-    <AppBar position="fixed" sx={style.mainContainer}>
-      <MaxWidthControl sx={style.widthControl}>
-        Header Content Here
-      </MaxWidthControl>
+    <AppBar position='fixed' sx={style.root}>
+      <MaxWidth sx={style.widthControl}>Header Content Here</MaxWidth>
     </AppBar>
   );
 };

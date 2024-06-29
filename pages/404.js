@@ -1,3 +1,2 @@
-import { ErrorPage } from "@src/components/Others";
-const PageComponent = () => <ErrorPage />;
+const PageComponent = () => <p>Error Message</p>;
 export default PageComponent;

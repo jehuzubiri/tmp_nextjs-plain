@@ -1,24 +1,23 @@
 //@DESC: Import starts here...
 // import { useRouter } from 'next/router';
-import React from "react";
 
 //@DESC: Functions starts here...
 export const getRouteExtras = (asPath) => {
-    const restURL = {};
+    const restURL = {}
     const asPathItems = asPath.split("?")[1]?.split("&");
     if (!!asPathItems) {
         asPathItems.forEach((i) => {
             const key = i.split("=")[0];
             const val = i.split("=")[1];
             restURL[key] = val.replace("%20", " ");
-        });
+        })
     }
     return restURL;
-};
+}
 
 export const getRouterParam = (path) => {
-    return path, null, { shallow: true };
-};
+    return path, null, { shallow: true }
+}
 
 export const getTagsData = (data, allTagIDs) => {
     const tagsOnRoute = [];
@@ -27,38 +26,29 @@ export const getTagsData = (data, allTagIDs) => {
             if (allTagIDs.includes(id)) {
                 tagsOnRoute.push({
                     id,
-                    label: data[id],
-                });
+                    label: data[id]
+                })
             }
-        });
+
+        })
     }
     return tagsOnRoute;
 };
 
-export const isReactNode = (value) => {
-    return React.isValidElement(value);
-}
-
 export const sortByDate = (arr, key) => {
-    return [...arr].sort((a, b) => new Date(b[key || "publishedAt"]) - new Date(a[key || "publishedAt"])) || [];
-};
+    return [...arr].sort((a, b) => new Date(b[key || "publishedAt"]) - new Date(a[key || "publishedAt"])) || []
+}
 
 export const dateFormatter = (isoDateString) => {
     const date = new Date(isoDateString);
     const hours = date.getHours();
     const minutes = date.getMinutes();
-    // const seconds = date.getSeconds();
-    const amPM = hours >= 12 ? "PM" : "AM";
+    const seconds = date.getSeconds();
+    const amPM = hours >= 12 ? 'PM' : 'AM';
     const formattedHours = hours % 12 || 12;
-    // const formattedDate = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, "0")}-${date
-    //   .getDate()
-    //   .toString()
-    //   .padStart(2, "0")} ${formattedHours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds
-    //     .toString()
-    //     .padStart(2, "0")} ${amPM}`;
-    const formattedDate = `${(date.getMonth() + 1).toString().padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}-${date.getFullYear()} ${formattedHours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")} ${amPM}`;
+    const formattedDate = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')} ${formattedHours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} ${amPM}`;
     return formattedDate;
-};
+}
 
 export const setLocalStorage = (key, value) => {
     return localStorage.setItem(key, value);
@@ -76,7 +66,7 @@ export const setLocalStorageWithExpiry = (key, value, secondsUntilExpiry) => {
     const now = new Date();
     const item = {
         value,
-        expiry: now.getTime() + secondsUntilExpiry * 1000,
+        expiry: now.getTime() + secondsUntilExpiry * 1000
     };
     setLocalStorage(key, JSON.stringify(item));
 };
@@ -91,14 +81,3 @@ export const getLocalStorageWithExpiry = (key) => {
     }
     return item.value;
 };
-
-export const validImageUrl = (url, callback) => {
-    var img = new Image();
-    img.onload = function () {
-        callback(true); // Image loaded successfully
-    };
-    img.onerror = function () {
-        callback(false); // Error loading image
-    };
-    img.src = url;
-}
