@@ -1,51 +1,53 @@
 export const useCutomStyles = {
   //BUTTONS ...
-  styleBtnPrimary: {
-    background: '#FAC50F',
-    background:
-      'linear-gradient(180deg, rgba(250,197,15,1) 19%, rgba(255,231,150,1) 49%, rgba(250,197,15,0.8799894957983193) 75%)',
-    cursor: 'pointer',
-    border: 'unset',
-    borderRadius: '0.25rem',
-    fontWeight: '600',
-    padding: "0.75rem 1.5rem",
-    transition: 'all 0.3s',
-    ["span"]: {
-      color: 'black',
-    }
-  },
-  styleBtnSecondary: {
-    border: `1px solid white`,
-    cursor: 'pointer',
-    borderRadius: '0.25rem',
-    background: 'unset',
-    fontWeight: '600',
-    '&:hover': {
-      border: `1px solid #FAC50F`,
-      ["span"]: {
-        color: "#FAC50F !important"
-      }
+  button: {
+    primary: {
+      background: '#FAC50F',
+      background:
+        'linear-gradient(180deg, rgba(250,197,15,1) 19%, rgba(255,231,150,1) 49%, rgba(250,197,15,0.8799894957983193) 75%)',
+      cursor: 'pointer',
+      border: 'unset',
+      borderRadius: '0.25rem',
+      fontWeight: '600',
+      padding: '0.75rem 1.5rem',
+      transition: 'all 0.3s',
+      ['span']: {
+        color: 'black',
+      },
     },
-    ['& span']: {
-      transition: 'all 0.3s ease',
+    secondary: {
+      border: `1px solid white`,
+      cursor: 'pointer',
+      borderRadius: '0.25rem',
+      background: 'unset',
+      fontWeight: '600',
+      transition: 'all 0.3s',
+      '&:hover': {
+        border: `1px solid #FAC50F`,
+        ['span']: {
+          color: '#FAC50F !important',
+        },
+      },
+      ['& span']: {
+        transition: 'all 0.3s ease',
+      },
     },
-  },
-  styleBtnText: {
-    pointerEvents: 'visible',
-    transition: '0.3s',
-    borderBottom: `1px solid white`,
-    width: 'fit-content',
-    cursor: 'pointer',
-    '&:hover': {
-      color: '#FAC50F',
-      borderBottom: `1px solid #FAC50F`,
+    text: {
+      pointerEvents: 'visible',
+      borderBottom: `1px solid white`,
+      width: 'fit-content',
+      cursor: 'pointer',
+      transition: 'all 0.3s',
+      '&:hover': {
+        color: '#FAC50F',
+        borderBottom: `1px solid #FAC50F`,
+      },
     },
   },
 
   //TYPOGRAPHY ...
-  styleTypography: {
+  typography: {
     textHeader: {
-      //V2 EK Wala pa
       color: 'white',
       fontSize: '1.75em',
       fontWeight: '700',
@@ -53,7 +55,6 @@ export const useCutomStyles = {
       letterSpacing: '0.01em',
     },
     textHeaderSub: {
-      //V2 EK Desktop Body Copy Bold
       color: 'white',
       fontSize: '1.125em',
       fontWeight: '700',
@@ -61,7 +62,6 @@ export const useCutomStyles = {
       letterSpacing: '0.02em',
     },
     textHeaderSub2: {
-      //V2 EK Mobile Button Text
       color: 'white',
       fontSize: '1em',
       fontWeight: '700',
@@ -69,36 +69,88 @@ export const useCutomStyles = {
       letterSpacing: '0.01em',
     },
     textParagraph: {
-      //V2 EK Mobile Body Copy
       color: 'white',
       fontSize: '0.875em',
       fontWeight: '400',
       lineHeight: '1.25em',
       letterSpacing: '0.02em',
-    }
+    },
+  },
+
+  //FLEXBOX
+  flexBox: {
+    allCenter: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    allCenterCol: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    row: {
+      display: 'flex',
+      flexDirection: 'row',
+    },
+    col: {
+      display: 'flex',
+      flexDirection: 'column',
+    },
+    rowCenter: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    rowCenterBetween: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    },
+    rowCenterCenter: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    colBetween: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+    },
+    colCenter: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
   },
 
   //IMG FILL COVER
-  sxImageCover: {
-    priority: true,
-    height: 1000,
-    width: 1000,
-    style: {
-      objectFit: 'cover',
-      objectPosition: '0 50%',
-      width: '100%',
-      height: '100%',
+  imgStyle: {
+    cover: {
+      priority: true,
+      height: 1000,
+      width: 1000,
+      style: {
+        objectFit: 'cover',
+        objectPosition: '0 50%',
+        width: '100%',
+        height: '100%',
+      },
     },
-  },
-  sxImageFill: {
-    priority: true,
-    height: 1000,
-    width: 1000,
-    style: {
-      objectFit: 'fill',
-      objectPosition: '50% 50%',
-      width: '100%',
-      height: '100%',
+    fill: {
+      priority: true,
+      height: 1000,
+      width: 1000,
+      style: {
+        objectFit: 'fill',
+        objectPosition: '50% 50%',
+        width: '100%',
+        height: '100%',
+      },
     },
   },
 };

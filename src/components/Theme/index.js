@@ -32,6 +32,7 @@ const Theme = ({ children }) => {
       values: {
         mobile: 360, // MOBILE_S
         mobile_m: 600, // MOBILE_M
+        tablet_s: 700, // TABLET_S
         tablet: 800, // TABLET
         laptop: 1024, // LAPTOP_S
         default: 1200, //DEFAULT CONTAINER
