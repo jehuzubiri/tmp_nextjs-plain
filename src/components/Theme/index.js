@@ -5,19 +5,21 @@ const Theme = ({ children }) => {
   const pageTheme = createTheme({
     palette: {
       background: {
-        primary: '#FAC50F',
+        primary: '#2C2C2C',
         white: 'white',
-        black: 'black',
+        black: '#1D1D1D',
+      },
+      status: {
+        info: '',
+        success: '',
+        warning: '',
+        error: '',
       },
       colors: {
-        primary: '#FAC50F',
+        primary: '#2C2C2C',
         red: '#860303',
         white: 'white',
-        black: 'black',
-        blacklight: '#0D0D0D',
-        gray: '#7D7D7D',
-        graylight: '#303030',
-        textdark: '#D0D0D0',
+        black: '#1D1D1D',
       },
       gradient: {
         black:
@@ -38,7 +40,7 @@ const Theme = ({ children }) => {
       },
     },
     typography: {
-      fontFamily: ['Inter', 'Bochan Serif'].join(','),
+      fontFamily: ['Inter', 'Bochan Serif', 'Kumbh Sans'].join(','),
     },
     useCutomStyles,
   });

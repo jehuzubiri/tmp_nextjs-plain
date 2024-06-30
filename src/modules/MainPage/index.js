@@ -7,7 +7,7 @@ const MainPage = ({ data }) => {
   return (
     <Box
       sx={{
-        fontFamily: 'Bochan Serif',
+        fontFamily: 'Kumbh Sans',
       }}
     >
       Content Here

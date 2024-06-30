@@ -1,10 +1,10 @@
-import MainPage from "@src/modules/MainPage"
+import MainPage from '@src/modules/MainPage';
 
 const PageContent = ({ data }) => <MainPage />;
 export default PageContent;
 
 export async function getServerSideProps() {
-  let data = {}
+  let data = {};
 
   return {
     props: {
