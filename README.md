@@ -1,3 +1,8 @@
+## DETAILS:
+
+> Template NextJS by: Jehu Zubiri
+> Last Update: 2/4/2025
+
 ## INIT SETUP:
 
 1. After cloning, run these on terminal
@@ -5,7 +10,7 @@
 3. npm i next
 4. npm run build
 5. npm i -g env-cmd
-6. npm run development/staging/production
+6. npm run development | staging | production
 
 ## MODULES:
 
