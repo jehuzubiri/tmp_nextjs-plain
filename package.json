@@ -1,28 +1,28 @@
 {
-	"name": "template",
-	"version": "1.0.0",
-	"private": true,
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint",
-		"build-and-serve": "npm run build; npm run start",
-		"development": "ENV=local env-cmd -f .env.development next",
-		"staging": "ENV=local env-cmd -f .env.staging next",
-		"production": "ENV=local env-cmd -f .env.production next"
-	},
-	"dependencies": {
-		"@mui/icons-material": "^5.15.10",
-		"@mui/material": "^5.15.21",
-		"axios": "^1.7.2",
-		"cpy-cli": "^5.0.0",
-		"cross-env": "^7.0.3",
-		"env-cmd": "^10.1.0",
-		"lodash": "^4.17.21",
-		"move-cli": "^2.0.0",
-		"next": "^14.2.4",
-		"react": "^18.2.0",
-		"react-dom": "^18"
-	}
+  "name": "nextjs-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "development": "ENV=local env-cmd -f ./env/.env.development next",
+    "staging": "ENV=local env-cmd -f ./env/.env.staging next",
+    "production": "ENV=local env-cmd -f ./env/.env.production next"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "js-cookie": "^3.0.5",
+    "lodash": "^4.17.21",
+    "next": "^14.2.23",
+    "nextjs-progressbar": "^0.0.16",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-redux": "^9.1.2",
+    "sass": "^1.78.0"
+  },
+  "description": ""
 }

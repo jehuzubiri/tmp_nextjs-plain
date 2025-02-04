@@ -1,0 +1,2 @@
+~~ Styling (Recommended HEX)
+   Use HEX for colors (e.g., #FFFFFF for white).

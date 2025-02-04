@@ -1,0 +1,138 @@
+@mixin header-font {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--bluegray-600);
+}
+
+@mixin btn-primary {
+  background: $green-color;
+  border: 1px solid $green-color;
+  color: white;
+  border-radius: 5px;
+  min-width: 70px;
+
+  &:hover,
+  &:focus {
+    background: lighten($green-color, 5%) !important;
+    color: white !important;
+    border: 1px solid ($green-color, 5%) !important;
+  }
+}
+
+@mixin btn-default-outline {
+  border: 1px solid $lightblack-color;
+  color: $black-color;
+  border-radius: 5px;
+  min-width: 70px;
+
+  &:hover {
+    color: lighten($lightblack-color, 10%);
+    border: 1px solid lighten($lightblack-color, 10%);
+  }
+}
+
+@mixin btn-secondary {
+  min-width: 78px;
+  color: var(--bluegray-800);
+  border-radius: 5px;
+  background: white;
+  border: 1px solid var(--bluegray-400);
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $gray-color;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid var(--bluegray-300);
+  }
+}
+
+@mixin btn-primary-outline {
+  min-width: 78px;
+  color: $green-color;
+  border-radius: 5px;
+  border: 1px solid $green-color;
+
+  svg {
+    color: $green-color;
+  }
+
+  &:hover {
+    color: lighten($green-color, 10%);
+    border-radius: 5px;
+    border: 1px solid lighten($green-color, 10%);
+  }
+}
+
+@mixin input-placeholder {
+  ::placeholder {
+    // Chrome, Firefox, Opera, Safari 10.1+
+    color: var(--bluegray-300);
+    opacity: 1;
+    // Firefox
+  }
+
+  :-ms-input-placeholder {
+    // Internet Explorer 10-11
+    color: var(--bluegray-300);
+  }
+
+  ::-ms-input-placeholder {
+    // Microsoft Edge
+    color: var(--bluegray-300);
+  }
+}
+
+@mixin ant-pagination {
+  .ant-pagination-item-active a {
+    color: var(--blue-600);
+  }
+
+  .ant-pagination-item-active {
+    border-color: var(--blue-400);
+  }
+
+  .ant-pagination-item:focus-visible a,
+  .ant-pagination-item:hover a,
+  .ant-pagination-item-active:focus-visible a,
+  .ant-pagination-item-active:hover a {
+    color: var(--blue-400) !important;
+  }
+
+  .ant-pagination-item-active:focus-visible,
+  .ant-pagination-item-active:hover {
+    border-color: var(--blue-400) !important;
+  }
+}
+
+@mixin btn-disabled {
+  border: 1px solid $gray-color !important;
+  color: $gray-color !important;
+  background: lighten($gray-color, 10%) !important;
+  box-shadow: none;
+}
+
+@mixin btn-disabled-all {
+  .ant-btn[disabled],
+  .ant-btn[disabled]:hover,
+  .ant-btn[disabled]:focus,
+  .ant-btn[disabled]:active {
+    border: 1px solid $gray-color !important;
+    color: $gray-color !important;
+    background: lighten($gray-color, 10%) !important;
+
+    svg {
+      color: $gray-color !important;
+    }
+  }
+}
+
+@mixin ant-select-disabled {
+  .ant-select-disabled.ant-select:not(.ant-select-customize-input)
+    .ant-select-selector {
+    border: 1px solid $gray-color !important;
+    color: $gray-color !important;
+    background: lighten($gray-color, 10%) !important;
+  }
+}

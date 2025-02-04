@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow: hidden;
+}
+
+html {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $background-dark;
+  color: $white-text;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar-track {
+  background: lightgrey;
+  border-radius: 0 0 0 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 0.25rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0 !important;
+}
+
+p {
+  line-height: auto;
+  font-size: clamp(var(--h6Min), var(--fontScaler), var(--h6Max));
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  font-size: clamp(var(--h6Min), var(--fontScaler), var(--h6Max));
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(var(--h1Min), var(--fontScaler), var(--h1Max));
+}
+
+h2 {
+  font-size: clamp(var(--h2Min), var(--fontScaler), var(--h2Max));
+}
+
+h3 {
+  font-size: clamp(var(--h3Min), var(--fontScaler), var(--h3Max));
+}

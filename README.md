@@ -1,38 +1,18 @@
-## LET'S GET STARTED
+## INIT SETUP:
 
-1. Install Packages
+1. After cloning, run these on terminal
+2. npm i
+3. npm i next
+4. npm run build
+5. npm i -g env-cmd
+6. npm run development/staging/production
 
-```bash
-npm install
-```
+## MODULES:
 
-2. Check ./styles/icons if not empty. If empty, run:
-
-```bash
-npm run generate:icons
-```
-
-3. run the development server:
-
-```bash
-# LOCAL ENV
-npm run development
-
-# STAGING ENV
-npm run staging
-
-# PRODUCTION ENV
-npm run production
-```
-
-Please configure env accordingly. You can find the file to
-edit in ./.docs/.envs/.env.environmet_name
-
-## CONFIGURATIONS
-
-The app is using:
-
-- [Next.js](https://nextjs.org/docs)
-- [Material UI](https://mui.com/material-ui/)
-- [REDUX THUNK](https://redux.js.org/usage/configuring-your-store)
-- [API REQUEST](https://axios-http.com/docs/intro)
+1. @reduxjs/toolkit
+2. react-redux
+3. nextjs-progressbar
+4. sass
+5. axios
+6. js-cookie
+7. lodash

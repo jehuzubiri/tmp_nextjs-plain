@@ -1,19 +1,19 @@
-import { APP_CONFIG } from '@src/constants/AppInfo';
+import { AppConfig } from '@/constants/App.const';
 import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
-  const { APP_NAME, APP_META, APP_VERSION, APP_LOCALE, APP_COLORS } =
-    APP_CONFIG;
 
   return (
-    <Html lang={APP_LOCALE} version={APP_VERSION}>
+    <Html lang='en' version={AppConfig.appVersion}>
       <Head>
-        <link rel='icon' href='favicon.png' />
-        <meta name={APP_META.NAME} content={APP_META.DESCRIPTION} />
-
-        <meta name='theme-color' content={APP_COLORS.THEME} />
-        <meta name='application-name' content={APP_NAME} />
-        <meta name='msapplication-tooltip' content={APP_NAME} />
+        <link rel="icon" href="favicon.png" />
+        <meta
+          name={AppConfig.metaAlt}
+          content={AppConfig.metaDescription}
+        />
+        <meta name="theme-color" content={AppConfig.theme_color} />
+        <meta name="application-name" content={AppConfig.appName} />
+        <meta name="msapplication-tooltip" content={AppConfig.appName} />
       </Head>
       <body>
         <Main />

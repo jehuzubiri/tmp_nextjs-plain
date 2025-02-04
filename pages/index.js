@@ -1,14 +1,16 @@
-import MainPage from '@src/modules/MainPage';
+import LandingPage from '@/modules/landingpage';
 
-const PageContent = ({ data }) => <MainPage />;
-export default PageContent;
+const PageIndex = ({ data }) => <LandingPage data={data} />;
+export default PageIndex;
 
 export async function getServerSideProps() {
-  let data = {};
-
   return {
     props: {
-      data,
+      data: {
+        sample_data: {
+          message: 'hello from pages/index.js'
+        },
+      },
     },
   };
 }

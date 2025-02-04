@@ -1,24 +1,44 @@
 import App from 'next/app';
-import Heads from '@src/layouts/Heads';
-import Layout from '@src/layouts/index';
-import Theme from '@src/components/Theme/index';
-import '@styles/main.css';
+import NextNProgress from 'nextjs-progressbar';
+import StoreProvider from '@/redux/provider';
 
-const AppMain = ({ Component, pageProps, data }) => {
+import { GlobalScripts } from '@/components/Main';
+import PageHead from '@/components/PageHead';
+import Layout from '@/components/Layout';
+import '../src/style/App.scss';
+
+const AppMain = ({ Component, pageProps, main }) => {
+  const validRqrmnts = true;
+  const script = main?.layout?.script;
+
   return (
-    <Theme>
-      <Heads />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </Theme>
+    <StoreProvider preloadedState={pageProps?.initialReduxState}>
+      <PageHead />
+      {validRqrmnts ? (
+        <>
+          <NextNProgress color="#FAC50F" />
+          <GlobalScripts script={script} />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </>
+      ) : (
+        <p>Under Development</p>
+      )}
+    </StoreProvider>
   );
 };
 
 AppMain.getInitialProps = async (context) => {
   const ctx = await App.getInitialProps(context);
-  const customDataHere = { name: 'custom data' };
-  return { ...ctx, data: customDataHere };
+
+  return {
+    ...ctx,
+    main: {
+      layout: {},
+      home: {},
+    },
+  };
 };
 
 export default AppMain;
