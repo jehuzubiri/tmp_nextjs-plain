@@ -1,9 +1,12 @@
-## DETAILS:
+# NextJS Template
 
-> Template NextJS by: Jehu Zubiri
+> By: Jehu Zubiri
+
 > Last Update: 2/4/2025
 
-## INIT SETUP:
+> ---
+
+> Setup Guide:
 
 1. After cloning, run these on terminal
 2. npm i
@@ -12,7 +15,7 @@
 5. npm i -g env-cmd
 6. npm run development | staging | production
 
-## MODULES:
+> Modules:
 
 1. @reduxjs/toolkit
 2. react-redux
