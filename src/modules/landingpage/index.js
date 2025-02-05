@@ -1,23 +1,25 @@
-import { useEffect } from 'react';
-import { apiGetHello } from '@/services/Hello.services';
-import { apiGetPokemon } from '@/services/Pokemon.services';
+import { GeneralServices } from '@/services/General.services';
+import { HelloServices } from '@/services/Hello.services';
 
 const LandingPage = ({ data }) => {
-  const getThis = async () => {
-    //@DESC: sample endpoints: 'pokemon/ditto' | 'pokemon-species/aegislash'
-    const { } = await apiGetHello({ params: { greet: 'hello Jehu' } });
-    const { ok, axios_response } = await apiGetPokemon({ endpoint: 'pokemon', params: { limit: 10 } });
-    if (ok) console.log(axios_response);
-  };
-
-  useEffect(() => {
-    getThis();
-  }, []);
 
   return (
     <section>
       <h1>Hello World</h1>
       <p>home page</p>
+      <div>
+        <button onClick={async () => {
+          const { } = await HelloServices({ params: { greet: 'hello Jehu' } });
+        }}>Get Hello</button>
+        <button onClick={async () => {
+          //@DESC: sample path: 'pokemon/ditto' | 'pokemon-species/aegislash'
+          const { } = await GeneralServices({
+            type: 'pokemon',
+            method: 'get',
+            path: 'pokemon/ditto'
+          });
+        }}>Get Pokemon</button>
+      </div>
     </section>
   );
 };

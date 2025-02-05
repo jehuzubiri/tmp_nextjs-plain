@@ -1,5 +1,5 @@
 
-export const apiGetHello = async ({ params }) => {
+export const HelloServices = async ({ params }) => {
   const res = await fetch('/api/hello', {
     method: 'POST',
     body: JSON.stringify({
